@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "764904984330",
+    "project_id": "movies-app-83d85",
+    "storage_bucket": "movies-app-83d85.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764904984330:android:ccef9c82705e2c73d1b4f3",
+        "android_client_info": {
+          "package_name": "com.example.movies_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764904984330-0r7n2iaprabl9a1fcg4mu9ns67nlshav.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.movies_app",
+            "certificate_hash": "c46c878c77b1fac07b9594c87608ba5e88a85a86"
+          }
+        },
+        {
+          "client_id": "764904984330-31vq8fcdqhb0fcclete0lgiu46t8qre3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUJx2TtN1UAve7kzbNobyFUfTf1ZE-rus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764904984330-31vq8fcdqhb0fcclete0lgiu46t8qre3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764904984330:android:acbdfadc60126babd1b4f3",
+        "android_client_info": {
+          "package_name": "movies_app.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764904984330-31vq8fcdqhb0fcclete0lgiu46t8qre3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUJx2TtN1UAve7kzbNobyFUfTf1ZE-rus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764904984330-31vq8fcdqhb0fcclete0lgiu46t8qre3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
