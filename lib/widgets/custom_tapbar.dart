@@ -37,7 +37,7 @@ class CustomTabBar extends StatelessWidget {
               ),
               indicatorSize: TabBarIndicatorSize.tab,
               tabs: tabTitles
-                  .map((title) => Tab(text: '$title'))
+                  .map((title) => Tab(text: title))
                   .toList(),
             ),
           ),

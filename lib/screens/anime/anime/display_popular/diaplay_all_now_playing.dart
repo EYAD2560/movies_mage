@@ -46,7 +46,7 @@ class _AllNowPlayingAnimeBody extends StatelessWidget {
             const AllHeadLine(title: "Popular Anime"),
             Expanded(
               child: BlocBuilder<PopularAnimePagination<GlobalModel>,
-                  popularAnimePaginationState<GlobalModel>>(
+                  PopularAnimePaginationState<GlobalModel>>(
                 builder: (context, state) {
                   final isInitialLoading =
                       state is PopularAnimePaginationLoading<GlobalModel> &&

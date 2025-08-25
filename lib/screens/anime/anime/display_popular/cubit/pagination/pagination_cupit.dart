@@ -4,7 +4,7 @@ part 'pagination_states.dart';
 
 typedef FetchPage<GlobalModel> = Future<List<GlobalModel>> Function(int page);
 
-class PopularAnimePagination<GlobalModel> extends Cubit<popularAnimePaginationState<GlobalModel>> {
+class PopularAnimePagination<GlobalModel> extends Cubit<PopularAnimePaginationState<GlobalModel>> {
   PopularAnimePagination({required this.fetchPage}) : super(const PaginationInitial());
 
   final FetchPage<GlobalModel> fetchPage;
@@ -53,7 +53,7 @@ class PopularAnimePagination<GlobalModel> extends Cubit<popularAnimePaginationSt
     fetchNextPage();
   }
 
-  void _safeEmit(popularAnimePaginationState<GlobalModel> state) {
+  void _safeEmit(PopularAnimePaginationState<GlobalModel> state) {
     if (!isClosed) {
       emit(state);
     } else {

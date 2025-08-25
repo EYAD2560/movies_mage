@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/widgets/all_head_line.dart';
 import 'package:movies_mage/details/favourite/cubit/cupit/favourite_cubit.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/details/favourite/cubit/cupit/favourite_listView.dart';
+import 'package:movies_mage/details/widgets/favourite_listView.dart';
 
 class FavouriteScreen extends StatelessWidget {
   const FavouriteScreen({super.key});

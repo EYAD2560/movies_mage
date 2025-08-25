@@ -17,7 +17,7 @@ class SettingsScreen extends StatelessWidget {
         content: const Text("Are you sure you want to log out?"),
         actions: [
           TextButton(
-            onPressed: () => Navigator.of(_).pop(), // ❌ Cancel
+            onPressed: () => Navigator.of(context).pop(), // ❌ Cancel
             child: const Text("Cancel"),
           ),
           ElevatedButton(
@@ -25,7 +25,7 @@ class SettingsScreen extends StatelessWidget {
               backgroundColor: Colors.red,
             ),
             onPressed: () {
-              Navigator.of(_).pop(); // Close the dialog
+              Navigator.of(context).pop(); // Close the dialog
               context.read<LoginCubit>().signOut();
             },
             child: const Text("Log Out"),
