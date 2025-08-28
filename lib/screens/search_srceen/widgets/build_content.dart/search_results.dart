@@ -14,15 +14,12 @@ class SearchResults extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 600,
-      child: TabBarView(
-        physics: const BouncingScrollPhysics(),
-        children: [
-          _buildListView(movies, "No movies found"),
-          _buildListView(tvShows, "No TV shows found"),
-        ],
-      ),
+    return TabBarView(
+      physics: const BouncingScrollPhysics(),
+      children: [
+        _buildListView(movies, "No movies found"),
+        _buildListView(tvShows, "No TV shows found"),
+      ],
     );
   }
 

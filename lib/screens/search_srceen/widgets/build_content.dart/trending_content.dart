@@ -16,41 +16,39 @@ class Trendingcontent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return ListView(
+      physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.symmetric(horizontal: 12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SearchChipsListView(),
-          const SizedBox(height: 25),
-          Trendingbar(
-            title: "Trending Movies",
-            ontap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => const AllTrendingMoviesListview(),
-                ),
-              );
-            },
-          ),
-          const TrendingMoviesView(),
-          const SizedBox(height: 25),
-          Trendingbar(
-            title: "Trending TV Shows",
-            ontap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => const AllTrendingTvShowsListview(),
-                ),
-              );
-            },
-          ),
-          const TrendingTvShowsView(),
-          const SizedBox(height: 25),
-        ],
-      ),
+      children: [
+        const SearchChipsListView(),
+        const SizedBox(height: 25),
+        Trendingbar(
+          title: "Trending Movies",
+          ontap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => const AllTrendingMoviesListview(),
+              ),
+            );
+          },
+        ),
+        const TrendingMoviesView(),
+        const SizedBox(height: 25),
+        Trendingbar(
+          title: "Trending TV Shows",
+          ontap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => const AllTrendingTvShowsListview(),
+              ),
+            );
+          },
+        ),
+        const TrendingTvShowsView(),
+        const SizedBox(height: 25),
+      ],
     );
   }
 }

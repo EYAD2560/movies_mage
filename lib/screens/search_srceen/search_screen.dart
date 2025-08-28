@@ -33,7 +33,6 @@ class _SearchView extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             FocusScope.of(context).unfocus();
-            // 🔹 هنا بنرجع للحالة الأصلية (Trending + Categories)
             context.read<SearchCubit>().reset();
             controller.clear();
           },
@@ -62,40 +61,48 @@ class _SearchView extends StatelessWidget {
                     ),
                     const SizedBox(height: 20),
 
-                    // ---------- BODY ----------
-                    if (state is SearchInitial) ...[
-                      SingleChildScrollView(
-                        child: Trendingcontent(context: context),
-                      ),
-                    ] else if (state is SearchLoading) ...[
-                      const Expanded(
-                        child: AllMoviessCardShimmerListView(),
-                      ),
-                    ] else if (state is SearchLoaded) ...[
-                      const CustomTabBar(
-                        tabTitles: ['Movies', 'TV Shows'],
-                      ),
-                      const SizedBox(height: 10),
-                      Expanded(
-                        child: SearchResults(
-                          movies: state.results
-                              .where((item) => item.mediaType == 'movie')
-                              .toList(),
-                          tvShows: state.results
-                              .where((item) => item.mediaType == 'tv')
-                              .toList(),
-                        ),
-                      ),
-                    ] else if (state is SearchError) ...[
-                      Expanded(
-                        child: Center(
-                          child: Text(
-                            state.message,
-                            style: const TextStyle(color: Colors.red),
-                          ),
-                        ),
-                      ),
-                    ],
+                    // ---------- BODY (ثابت Expanded مرة واحدة) ----------
+                    Expanded(
+                      child: () {
+                        if (state is SearchInitial) {
+                          // يدي مساحة ثابتة للسكرول
+                          return SingleChildScrollView(
+                            child: Trendingcontent(context: context),
+                          );
+                        } else if (state is SearchLoading) {
+                          return const AllMoviessCardShimmerListView();
+                        } else if (state is SearchLoaded) {
+                          return Column(
+                            children: [
+                              const CustomTabBar(
+                                tabTitles: ['Movies', 'TV Shows'],
+                              ),
+                              const SizedBox(height: 10),
+                              Expanded(
+                                child: SearchResults(
+                                  movies: state.results
+                                      .where(
+                                          (item) => item.mediaType == 'movie')
+                                      .toList(),
+                                  tvShows: state.results
+                                      .where((item) => item.mediaType == 'tv')
+                                      .toList(),
+                                ),
+                              ),
+                            ],
+                          );
+                        } else if (state is SearchError) {
+                          return Center(
+                            child: Text(
+                              state.message,
+                              style: const TextStyle(color: Colors.red),
+                            ),
+                          );
+                        } else {
+                          return const SizedBox.shrink();
+                        }
+                      }(),
+                    ),
                   ],
                 );
               },
