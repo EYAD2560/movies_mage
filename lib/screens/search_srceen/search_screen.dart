@@ -33,7 +33,6 @@ class _SearchView extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             FocusScope.of(context).unfocus();
-
             // 🔹 هنا بنرجع للحالة الأصلية (Trending + Categories)
             context.read<SearchCubit>().reset();
             controller.clear();
@@ -65,10 +64,8 @@ class _SearchView extends StatelessWidget {
 
                     // ---------- BODY ----------
                     if (state is SearchInitial) ...[
-                      Expanded(
-                        child: SingleChildScrollView(
-                          child: Trendingcontent(context: context),
-                        ),
+                      SingleChildScrollView(
+                        child: Trendingcontent(context: context),
                       ),
                     ] else if (state is SearchLoading) ...[
                       const Expanded(

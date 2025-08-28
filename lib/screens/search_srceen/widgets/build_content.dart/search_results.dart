@@ -14,12 +14,15 @@ class SearchResults extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TabBarView(
-      physics: const BouncingScrollPhysics(),
-      children: [
-        _buildListView(movies, "No movies found"),
-        _buildListView(tvShows, "No TV shows found"),
-      ],
+    return SizedBox(
+      height: 600,
+      child: TabBarView(
+        physics: const BouncingScrollPhysics(),
+        children: [
+          _buildListView(movies, "No movies found"),
+          _buildListView(tvShows, "No TV shows found"),
+        ],
+      ),
     );
   }
 
@@ -34,26 +37,23 @@ class SearchResults extends StatelessWidget {
           style: const TextStyle(color: Colors.white),
         ),
       );
-    }
-   else {
-      return Expanded(
-        child: ListView.builder(
-          physics: const BouncingScrollPhysics(),
-          shrinkWrap: true, // ده بيمنع unbounded height
-          itemCount: items.length,
-          itemBuilder: (context, index) {
-            final item = items[index];
-            return AllMoviesCard(
-              poster: item.poster,
-              name: item.name,
-              rate: item.rate,
-              overview: item.overview,
-              genres: item.genres,
-              movieId: item.id,
-              contentType: item.mediaType,
-            );
-          },
-        ),
+    } else {
+      return ListView.builder(
+        physics: const BouncingScrollPhysics(),
+        shrinkWrap: true, // ده بيمنع unbounded height
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          final item = items[index];
+          return AllMoviesCard(
+            poster: item.poster,
+            name: item.name,
+            rate: item.rate,
+            overview: item.overview,
+            genres: item.genres,
+            movieId: item.id,
+            contentType: item.mediaType,
+          );
+        },
       );
     }
   }
