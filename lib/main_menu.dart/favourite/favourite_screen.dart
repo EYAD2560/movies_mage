@@ -39,8 +39,6 @@ class FavouriteScreen extends StatelessWidget {
                         ),
                         onDismissed: (_) {
                           context.read<FavouritesCubit>().removeFavourite(item);
-
-                        
                         },
                         child: FavouriteListView(
                           scrollController: ScrollController(),
