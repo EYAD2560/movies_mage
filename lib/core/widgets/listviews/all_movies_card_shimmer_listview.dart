@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_mage/shimmer/all_movies_card_shimmer.dart';
+import 'package:movies_mage/core/widgets/shimmer/all_movies_card_shimmer.dart';
 
 class AllMoviessCardShimmerListView extends StatelessWidget {
   const AllMoviessCardShimmerListView({

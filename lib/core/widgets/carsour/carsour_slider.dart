@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:movies_mage/core/widgets/gradient.dart';
-import 'package:movies_mage/details/cupit/details_cubit.dart';
-import 'package:movies_mage/details/details_view.dart';
-import 'package:movies_mage/shimmer/curser_slider_shimmer.dart';
-import 'package:movies_mage/shimmer/home_shimmer.dart';
+import 'package:movies_mage/core/widgets/shimmer/curser_slider_shimmer.dart';
+import 'package:movies_mage/core/widgets/shimmer/home_shimmer.dart';
+import 'package:movies_mage/features/details/cupit/details_cubit.dart';
+import 'package:movies_mage/features/details/details_view.dart';
+
 
 class CarouseSlider extends StatelessWidget {
   final List<Map<String, dynamic>> posters;
