@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/widgets/gernes/genre_chips.dart';
 import 'package:movies_mage/details/cupit/details_cubit.dart';
 import 'package:movies_mage/details/details_view.dart';
-import 'package:movies_mage/widgets/gernes/genre_chips.dart';
 
 class AllMoviesCard extends StatelessWidget {
   final String poster;

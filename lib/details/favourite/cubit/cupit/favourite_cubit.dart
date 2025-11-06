@@ -11,45 +11,57 @@ class FavouritesCubit extends Cubit<FavouritesState> {
     _loadFavourites();
   }
 
+  /// Load favourites safely from local storage
   Future<void> _loadFavourites() async {
-    final prefs = await SharedPreferences.getInstance();
-    final jsonString = prefs.getString('favourites');
-    if (jsonString != null) {
-      final List decoded = jsonDecode(jsonString);
-      final favourites = decoded
-          .map((e) => GlobalModel.fromJson(Map<String, dynamic>.from(e)))
-          .toList();
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final jsonString = prefs.getString('favourites');
 
-      emit(FavouritesState(favourites));
+      if (jsonString != null && jsonString.isNotEmpty) {
+        final List<dynamic> decoded = jsonDecode(jsonString);
+        final favourites = decoded
+            .map((e) => GlobalModel.fromJson(Map<String, dynamic>.from(e)))
+            .toList();
+
+        emit(FavouritesState(favourites));
+      }
+    } catch (e) {
+      // Optional: add a logger or handle corrupted data
+      emit(const FavouritesState([]));
     }
   }
 
-  Future<void> toggleFavourite(GlobalModel favouriteitem) async {
+  /// Add or remove an item from favourites
+  Future<void> toggleFavourite(GlobalModel item) async {
     final updatedList = List<GlobalModel>.from(state.favourites);
 
-    if (updatedList.any((element) => element.id == favouriteitem.id)) {
-      updatedList.removeWhere((element) => element.id == favouriteitem.id);
+    final index = updatedList.indexWhere((element) => element.id == item.id);
+    if (index != -1) {
+      updatedList.removeAt(index);
     } else {
-      updatedList.add(favouriteitem);
+      updatedList.add(item);
     }
 
     emit(FavouritesState(updatedList));
     await _saveFavourites(updatedList);
   }
 
+  /// Save favourites persistently
   Future<void> _saveFavourites(List<GlobalModel> favourites) async {
     final prefs = await SharedPreferences.getInstance();
     final jsonString = jsonEncode(favourites.map((e) => e.toJson()).toList());
     await prefs.setString('favourites', jsonString);
   }
 
+  /// Check if an item is favourited
   bool isFavourite(int id) {
-    return state.favourites.any((favouriteitem) => favouriteitem.id == id);
+    return state.favourites.any((favourite) => favourite.id == id);
   }
 
-  Future<void> removeFavourite(GlobalModel favouriteItem) async {
+  /// Remove a favourite explicitly
+  Future<void> removeFavourite(GlobalModel item) async {
     final updatedList = List<GlobalModel>.from(state.favourites)
-      ..removeWhere((element) => element.id == favouriteItem.id);
+      ..removeWhere((element) => element.id == item.id);
 
     emit(FavouritesState(updatedList));
     await _saveFavourites(updatedList);

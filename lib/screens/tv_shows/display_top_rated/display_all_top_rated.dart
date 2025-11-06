@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/widgets/all_head_line.dart';
+import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/screens/tv_shows/display_top_rated/cubit/pagination/pagination_cubit.dart';
-import 'package:movies_mage/widgets/all_head_line.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/screens/tv_shows/all_tv_listview.dart';
 import 'top_rated_service.dart';
 

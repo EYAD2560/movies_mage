@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_mage/widgets/return_button.dart';
+import 'package:movies_mage/core/widgets/return_button.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class TrailerPlayerScreen extends StatelessWidget {

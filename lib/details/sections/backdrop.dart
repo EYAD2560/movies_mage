@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:movies_mage/widgets/gradient.dart';
+import 'package:movies_mage/core/widgets/gradient.dart';
 
 class BackDropSection extends StatelessWidget {
   final String backdropPath;

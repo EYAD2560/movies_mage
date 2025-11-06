@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/homepage/login/cupit/logincupit_cubit.dart';
 import 'package:movies_mage/homepage/login/cupit/logincupit_state.dart';
 import 'package:movies_mage/homepage/login/login_screen_view.dart';
 import 'package:movies_mage/main_menu.dart/main/menu_charts.dart';
-import 'package:movies_mage/widgets/all_head_line.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});

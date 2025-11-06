@@ -2,9 +2,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:movies_mage/core/widgets/gradient.dart';
 import 'package:movies_mage/details/cupit/details_cubit.dart';
 import 'package:movies_mage/details/details_view.dart';
-import 'package:movies_mage/widgets/gradient.dart';
 import 'package:movies_mage/shimmer/curser_slider_shimmer.dart';
 import 'package:movies_mage/shimmer/home_shimmer.dart';
 

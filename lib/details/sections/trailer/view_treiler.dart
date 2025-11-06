@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:movies_mage/details/sections/trailer/trailer_screen.dart';
 import 'package:movies_mage/details/sections/trailer/trailer_service.dart';

@@ -1,5 +1,9 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/widgets/carsour/carsour_slider.dart';
+import 'package:movies_mage/core/widgets/custom_bar.dart';
 import 'package:movies_mage/screens/tv_shows/upcomming_tv.dart/upcoming_tvshows_cubit.dart';
 import 'package:movies_mage/screens/tv_shows/display_all/display_all_all_listview.dart';
 import 'package:movies_mage/screens/tv_shows/display_all/display_all_listview.dart';
@@ -7,8 +11,7 @@ import 'package:movies_mage/screens/tv_shows/display_now_playing/diaplay_all_now
 import 'package:movies_mage/screens/tv_shows/display_now_playing/now_playing_listview.dart';
 import 'package:movies_mage/screens/tv_shows/display_top_rated/display_all_top_rated.dart';
 import 'package:movies_mage/screens/tv_shows/display_top_rated/top_rated_listview.dart';
-import 'package:movies_mage/widgets/carsour/carsour_slider.dart';
-import 'package:movies_mage/widgets/custom_bar.dart';
+
 import 'package:movies_mage/shimmer/home_shimmer.dart';
 
 class TvShowsPageBody extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_mage/widgets/all_head_line.dart';
+import 'package:movies_mage/core/widgets/all_head_line.dart';
 
 class BiographyPage extends StatelessWidget {
   const BiographyPage(

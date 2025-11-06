@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/constants.dart';
+import 'package:movies_mage/core/widgets/custom_button.dart';
+import 'package:movies_mage/core/widgets/custom_text_field.dart';
 import 'package:movies_mage/homepage/signup/cupit/cubit/sign_up_cupit_cubit.dart';
-import 'package:movies_mage/widgets/custom_text_field.dart';
-import 'package:movies_mage/widgets/custom_button.dart';
+
 
 class SignUpBody extends StatefulWidget {
   const SignUpBody({super.key});

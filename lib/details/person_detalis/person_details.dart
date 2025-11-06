@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:movies_mage/core/widgets/all_head_line.dart';
+import 'package:movies_mage/core/widgets/custom_tapbar.dart';
 import 'package:movies_mage/details/person_detalis/grid_view.dart';
-import 'package:movies_mage/widgets/all_head_line.dart';
-import 'package:movies_mage/widgets/custom_tapbar.dart';
+
 import 'package:movies_mage/details/person_detalis/person_model.dart';
 import 'package:movies_mage/details/person_detalis/person_service.dart';
 import 'package:movies_mage/shimmer/person_details_shimmer.dart';

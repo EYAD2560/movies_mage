@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/widgets/cards/all_movies_card.dart';
+import 'package:movies_mage/core/widgets/cards/all_movies_card.dart';
 import 'package:movies_mage/shimmer/all_movies_card_shimmer.dart';
 
 class AllMoviesListView extends StatelessWidget {

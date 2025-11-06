@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/widgets/carsour/carsour_slider.dart';
+import 'package:movies_mage/core/widgets/custom_bar.dart';
 import 'package:movies_mage/screens/movies/Upcoming_movies/upcomming_movies_cubit.dart';
 import 'package:movies_mage/screens/movies/display_all/display_all_all_listview.dart';
 import 'package:movies_mage/screens/movies/display_all/display_all_listview.dart';
@@ -7,8 +9,7 @@ import 'package:movies_mage/screens/movies/display_now_playing/diaplay_all_now_p
 import 'package:movies_mage/screens/movies/display_now_playing/now_playing_listview.dart';
 import 'package:movies_mage/screens/movies/display_top_rated/display_all_top_rated.dart';
 import 'package:movies_mage/screens/movies/display_top_rated/top_rated_listview.dart';
-import 'package:movies_mage/widgets/carsour/carsour_slider.dart';
-import 'package:movies_mage/widgets/custom_bar.dart';
+
 import 'package:movies_mage/shimmer/home_shimmer.dart';
 
 class MoviesPagebody extends StatelessWidget {
@@ -18,7 +19,6 @@ class MoviesPagebody extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<MoviesCubit, UpcommingMoviesStates>(
       builder: (context, state) {
-        
         // Show shimmer while loading
         if (state is MoviesLoading) {
           return const HomeShimmerScreen();
@@ -34,7 +34,7 @@ class MoviesPagebody extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
-              SizedBox(
+                SizedBox(
                   height: MediaQuery.of(context).size.height * 0.7,
                   width: double.infinity,
                   child: CarouseSlider(posters: state.posters),
@@ -50,8 +50,7 @@ class MoviesPagebody extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>
-                                  const AllTopRatedListview(),
+                              builder: (context) => const AllTopRatedListview(),
                             ),
                           );
                         },

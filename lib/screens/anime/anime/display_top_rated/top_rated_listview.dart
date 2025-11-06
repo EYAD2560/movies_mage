@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/global_model.dart';
+import 'package:movies_mage/core/widgets/listviews/movies_listview.dart';
+import 'package:movies_mage/core/widgets/listviews/movies_shimmer_listview.dart';
 import 'package:movies_mage/screens/anime/anime/display_top_rated/cubit/top_rated_cubit.dart';
-import 'package:movies_mage/widgets/listviews/movies_listview.dart';
-import 'package:movies_mage/widgets/listviews/movies_shimmer_listview.dart';
+
 
 class TopRatedAnimeListview extends StatelessWidget {
   const TopRatedAnimeListview({super.key});

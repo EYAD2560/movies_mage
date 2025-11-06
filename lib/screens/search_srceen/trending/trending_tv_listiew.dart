@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/widgets/listviews/movies_shimmer_listview.dart';
 import 'package:movies_mage/screens/search_srceen/trending/trending_listview.dart';
 import 'package:movies_mage/screens/search_srceen/trending/tvshows/trending_tv_shows_cubit.dart';
-import 'package:movies_mage/widgets/listviews/movies_shimmer_listview.dart';
 
 class TrendingTvShowsView extends StatelessWidget {
   const TrendingTvShowsView({super.key});

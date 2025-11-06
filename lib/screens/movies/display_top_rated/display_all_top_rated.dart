@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/global_model.dart';
+import 'package:movies_mage/core/widgets/all_head_line.dart';
+import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/screens/movies/display_top_rated/cubit/cupits/pagination/pagination_cupit.dart';
-import 'package:movies_mage/widgets/all_head_line.dart';
 import 'package:movies_mage/screens/movies/all_movies_list_view.dart';
-import 'package:movies_mage/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'top_rated_service.dart';
 
 class AllTopRatedListview extends StatelessWidget {

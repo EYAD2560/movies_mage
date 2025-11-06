@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/details/sections/trailer/viewTreiler.dart';
-import 'package:movies_mage/widgets/custom_icon.dart';
+import 'package:movies_mage/core/widgets/custom_icon.dart';
+import 'package:movies_mage/details/sections/trailer/view_treiler.dart';
 
 class TrailerSection extends StatelessWidget {
   const TrailerSection({

@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:movies_mage/constants.dart';
-import 'package:movies_mage/widgets/gernes/genre_service.dart';
 import 'package:movies_mage/core/global_model.dart';
+import 'package:movies_mage/core/widgets/gernes/genre_service.dart';
 
 class AiringService {
   Future<List<GlobalModel>> fetchAiringShows({int page = 1}) async {

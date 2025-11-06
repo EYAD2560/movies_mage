@@ -21,41 +21,43 @@ class PersonWorksGrid extends StatelessWidget {
       return const Center(child: Text("No items found."));
     }
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-      child: SizedBox(
-        height: 300,
-        child: GridView.builder(
-          physics: const BouncingScrollPhysics(),
-          itemCount: items.length,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            mainAxisSpacing: 8,
-            crossAxisSpacing: 8,
-            childAspectRatio: 0.6,
-          ),
-          itemBuilder: (context, index) {
-            final work = items[index];
-        
-            return GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => BlocProvider(
-                      create: (_) =>
-                          DetailsCubit()..getDetails(work.id, contentType),
-                      child: DetailsScreen(contentType: contentType, id: work.id),
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+        child: SizedBox(
+          
+          child: GridView.builder(
+            physics: const BouncingScrollPhysics(),
+            itemCount: items.length,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+              mainAxisSpacing: 8,
+              crossAxisSpacing: 8,
+              childAspectRatio: 0.6,
+            ),
+            itemBuilder: (context, index) {
+              final work = items[index];
+          
+              return GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => BlocProvider(
+                        create: (_) =>
+                            DetailsCubit()..getDetails(work.id, contentType),
+                        child: DetailsScreen(contentType: contentType, id: work.id),
+                      ),
                     ),
-                  ),
-                );
-              },
-              child: ShowsTheyParticipatedInCard(
-                work: work,
-                movieId: work.id,
-                contenttype: contentType,
-              ),
-            );
-          },
+                  );
+                },
+                child: ShowsTheyParticipatedInCard(
+                  work: work,
+                  movieId: work.id,
+                  contenttype: contentType,
+                ),
+              );
+            },
+          ),
         ),
       ),
     );

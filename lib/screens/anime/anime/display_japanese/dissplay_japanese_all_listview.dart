@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/widgets/all_head_line.dart';
+import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/screens/anime/anime/display_japanese/cubit/pagination/pagination_cupit.dart';
-import 'package:movies_mage/widgets/all_head_line.dart';
 import 'package:movies_mage/screens/anime/anime/all_anime_listview.dart';
 import 'package:movies_mage/screens/anime/anime/display_japanese/dissplay_japanese_service.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/widgets/listviews/all_movies_card_shimmer_listview.dart';
 
 class DisplayAlljapaneseAnimeListview extends StatelessWidget {
   const DisplayAlljapaneseAnimeListview({super.key});

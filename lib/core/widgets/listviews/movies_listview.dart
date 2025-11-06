@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/widgets/cards/movies_card.dart';
+import 'package:movies_mage/core/widgets/cards/movies_card.dart';
 
 class MoviesListView extends StatelessWidget {
   const MoviesListView({super.key, required this.items, required this.contentType, });

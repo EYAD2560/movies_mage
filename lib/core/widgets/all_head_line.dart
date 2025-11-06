@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_mage/widgets/return_button.dart';
+import 'package:movies_mage/core/widgets/return_button.dart';
 
 class AllHeadLine extends StatelessWidget {
   const AllHeadLine({

@@ -3,11 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:movies_mage/homepage/onboarding_screen.dart';
 
 void main() async {
-  FlutterError.onError = (FlutterErrorDetails details) {
-    FlutterError.presentError(details);
-    debugPrint('ERROR CAUGHT: ${details.exception}');
-  };
-
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 

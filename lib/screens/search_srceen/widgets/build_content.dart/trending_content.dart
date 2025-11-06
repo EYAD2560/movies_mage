@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movies_mage/screens/search_srceen/trending/all_trending_movies_listView.dart';
+import 'package:movies_mage/screens/search_srceen/trending/all_trending_movies_listview.dart';
 import 'package:movies_mage/screens/search_srceen/trending/all_trending_tv_listview.dart';
-import 'package:movies_mage/screens/search_srceen/trending/trending_movies_ListView.dart';
+import 'package:movies_mage/screens/search_srceen/trending/trending_movies_listview.dart';
 import 'package:movies_mage/screens/search_srceen/trending/trending_tv_listiew.dart';
 import 'package:movies_mage/screens/search_srceen/category_search/search_chips_listview.dart';
 import 'package:movies_mage/screens/search_srceen/widgets/trending_bar.dart';

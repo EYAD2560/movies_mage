@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/screens/search_srceen/category_search/pagination/pagination_cubit.dart';
 import 'package:movies_mage/screens/search_srceen/sevices/search_service.dart';
-import 'package:movies_mage/widgets/all_head_line.dart';
 import 'package:movies_mage/screens/search_srceen/category_search/grid_movies_card.dart';
 import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/screens/search_srceen/category_search/grid_view_shimmmer_listview.dart';

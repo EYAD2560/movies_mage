@@ -1,5 +1,9 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/widgets/carsour/carsour_slider.dart';
+import 'package:movies_mage/core/widgets/custom_bar.dart';
 import 'package:movies_mage/screens/anime/anime/display_english/display_japanese/dissplay_english_all_listview.dart';
 import 'package:movies_mage/screens/anime/anime/display_english/display_japanese/dissplay_english_listview.dart';
 import 'package:movies_mage/screens/anime/anime/display_japanese/dissplay_japanese_all_listview.dart';
@@ -9,8 +13,7 @@ import 'package:movies_mage/screens/anime/anime/display_popular/now_playing_list
 import 'package:movies_mage/screens/anime/anime/display_top_rated/display_all_top_rated.dart';
 import 'package:movies_mage/screens/anime/anime/display_top_rated/top_rated_listview.dart';
 import 'package:movies_mage/screens/anime/anime/upcomming_anime/upcomming_anime_cubit.dart';
-import 'package:movies_mage/widgets/carsour/carsour_slider.dart';
-import 'package:movies_mage/widgets/custom_bar.dart';
+
 import 'package:movies_mage/shimmer/home_shimmer.dart';
 
 class AnimeBody extends StatelessWidget {

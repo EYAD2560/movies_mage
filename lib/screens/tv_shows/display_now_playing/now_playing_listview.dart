@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/widgets/listviews/movies_listview.dart';
+import 'package:movies_mage/core/widgets/listviews/movies_shimmer_listview.dart';
 import 'package:movies_mage/screens/tv_shows/display_now_playing/cubit/now_playing_tv_cubit.dart';
-import 'package:movies_mage/widgets/listviews/movies_listview.dart';
-import 'package:movies_mage/widgets/listviews/movies_shimmer_listview.dart';
+
 
 class NowAiringListview extends StatelessWidget {
   const NowAiringListview({super.key});

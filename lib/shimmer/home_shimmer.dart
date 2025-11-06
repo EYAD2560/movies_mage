@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movies_mage/widgets/custom_bar.dart';
-import 'package:movies_mage/widgets/listviews/movies_shimmer_listview.dart';
+import 'package:movies_mage/core/widgets/custom_bar.dart';
+import 'package:movies_mage/core/widgets/listviews/movies_shimmer_listview.dart';
 import 'package:movies_mage/shimmer/curser_slider_shimmer.dart';
 
 class HomeShimmerScreen extends StatelessWidget {

@@ -21,7 +21,30 @@ class GlobalModel {
     required this.mediaType,
   });
 
-  /// ✅ For saving to local storage
+  /// Factory constructor for creating a new instance from JSON
+  factory GlobalModel.fromJson(Map<String, dynamic> json, [List<String>? genreNames]) {
+    return GlobalModel(
+      id: json['id'] ?? 0,
+      name: json['name'] ?? json['title'] ?? 'No Title',
+      overview: json['overview'] ?? '',
+      poster: json['poster'] ?? json['poster_path'] ?? '',
+      backdropImage: json['backdrop'] ?? json['backdrop_path'] ?? '',
+      releaseDate: json['releaseDate'] ??
+          json['release_date'] ??
+          json['first_air_date'] ??
+          '',
+      rate: json['rate']?.toString() ??
+          (json['vote_average'] != null
+              ? (json['vote_average'] is num
+                  ? (json['vote_average'] as num).toStringAsFixed(1)
+                  : json['vote_average'].toString())
+              : ''),
+      genres: genreNames ?? List<String>.from(json['genres'] ?? []),
+      mediaType: json['media_type'] ?? (json['title'] != null ? 'movie' : 'tv'),
+    );
+  }
+
+  /// ✅ Added: Convert this object to JSON (for saving in SharedPreferences)
   Map<String, dynamic> toJson() {
     return {
       'id': id,
@@ -32,30 +55,8 @@ class GlobalModel {
       'releaseDate': releaseDate,
       'rate': rate,
       'genres': genres,
-      'mediaType': mediaType,
+      'media_type': mediaType,
     };
-  }
-
-  /// ✅ For restoring from local storage
-  factory GlobalModel.fromJson(Map<String, dynamic> json,
-      [List<String>? genreNames]) {
-    return GlobalModel(
-      id: json['id'] ?? 0,
-      name: json['name'] ?? json['title'] ?? 'No Title',
-      overview: json['overview'] ?? '',
-      poster: json['poster'] ?? json['poster_path'] ?? '',
-      backdropImage: json['backdrop'] ?? json['backdrop_path'] ?? '', // ✅ added
-      releaseDate: json['releaseDate'] ??
-          json['release_date'] ??
-          json['first_air_date'] ??
-          '',
-      rate: json['rate']?.toString() ??
-          (json['vote_average'] != null
-              ? json['vote_average'].toStringAsFixed(1)
-              : ''),
-      genres: genreNames ?? List<String>.from(json['genres'] ?? []),
-      mediaType: json['media_type'] ?? (json['title'] != null ? 'movie' : 'tv'),
-    );
   }
 
   factory GlobalModel.empty() {

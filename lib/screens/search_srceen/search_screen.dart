@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/widgets/all_head_line.dart';
+import 'package:movies_mage/core/widgets/custom_tapbar.dart';
+import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/screens/search_srceen/cubit/search_cubit.dart';
 import 'package:movies_mage/screens/search_srceen/widgets/search_bar.dart';
 import 'package:movies_mage/screens/search_srceen/widgets/build_content.dart/search_results.dart';
 import 'package:movies_mage/screens/search_srceen/widgets/build_content.dart/trending_content.dart';
-import 'package:movies_mage/widgets/all_head_line.dart';
-import 'package:movies_mage/widgets/custom_tapbar.dart';
-import 'package:movies_mage/widgets/listviews/all_movies_card_shimmer_listview.dart';
+
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -33,7 +34,6 @@ class _SearchView extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             FocusScope.of(context).unfocus();
-            // 🔹 هنا بنرجع للحالة الأصلية (Trending + Categories)
             context.read<SearchCubit>().reset();
             controller.clear();
           },
