@@ -5,7 +5,7 @@ import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listv
 import 'package:movies_mage/screens/movies/display_all/cubit/pagination/pagination_cupit.dart';
 import 'package:movies_mage/screens/movies/display_all/diaplay_all_service.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/screens/movies/all_movies_list_view.dart';
+import 'package:movies_mage/screens/movies/presentation/views/widgets/all_movies_list_view.dart';
 
 class DisplayAllMoviesListview extends StatelessWidget {
   const DisplayAllMoviesListview({super.key});

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movies_mage/core/widgets/custom_appbar.dart';
 import 'package:movies_mage/core/widgets/custom_tapbar.dart';
 import 'package:movies_mage/screens/anime/anime/anime_view.dart';
-import 'package:movies_mage/screens/movies/movies_page_view.dart';
+import 'package:movies_mage/screens/movies/presentation/views/movies_page_view.dart';
 import 'package:movies_mage/screens/tv_shows/tv_shows_view.dart';
 
 

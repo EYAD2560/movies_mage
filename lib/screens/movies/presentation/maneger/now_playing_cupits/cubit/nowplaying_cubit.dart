@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:http/http.dart' as http;
@@ -7,10 +6,10 @@ import 'package:movies_mage/constants.dart';
 import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/gernes/genre_service.dart';
 
-part 'now_playing_state.dart';
+part 'nowplaying_state.dart';
 
-class NowPlayingCubit extends Cubit<NowPlayingState> {
-  NowPlayingCubit() : super(NowPlayingInitial());
+class NowplayingCubit extends Cubit<NowplayingState> {
+  NowplayingCubit() : super(NowplayingInitial());
    Future<void> fetchNowPlayingMovies({int page = 1}) async {
       emit(NowPlayingLoading());
 

@@ -5,10 +5,10 @@ import 'package:movies_mage/core/widgets/custom_bar.dart';
 import 'package:movies_mage/screens/movies/Upcoming_movies/upcomming_movies_cubit.dart';
 import 'package:movies_mage/screens/movies/display_all/display_all_all_listview.dart';
 import 'package:movies_mage/screens/movies/display_all/display_all_listview.dart';
-import 'package:movies_mage/screens/movies/display_now_playing/diaplay_all_now_playing.dart';
-import 'package:movies_mage/screens/movies/display_now_playing/now_playing_listview.dart';
-import 'package:movies_mage/screens/movies/display_top_rated/display_all_top_rated.dart';
-import 'package:movies_mage/screens/movies/display_top_rated/top_rated_listview.dart';
+import 'package:movies_mage/screens/movies/presentation/views/widgets/display_now_playing/diaplay_all_now_playing.dart';
+import 'package:movies_mage/screens/movies/presentation/views/widgets/display_now_playing/now_playing_listview.dart';
+import 'package:movies_mage/screens/movies/presentation/views/widgets/display_top_rated/display_all_top_rated.dart';
+import 'package:movies_mage/screens/movies/presentation/views/widgets/display_top_rated/top_rated_listview.dart';
 
 import 'package:movies_mage/shimmer/home_shimmer.dart';
 

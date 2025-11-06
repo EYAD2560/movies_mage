@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_listview.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_shimmer_listview.dart';
-import 'package:movies_mage/screens/movies/display_top_rated/cubit/top_rated_cubit.dart';
+import 'package:movies_mage/screens/movies/presentation/maneger/top_rated_cupits/top_rated_cubit.dart';
 
 
 class TopRatedListview extends StatelessWidget {

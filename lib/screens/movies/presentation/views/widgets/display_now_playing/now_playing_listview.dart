@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_listview.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_shimmer_listview.dart';
-import 'package:movies_mage/screens/movies/display_now_playing/cubit/now_playing_cubit.dart';
+import 'package:movies_mage/screens/movies/presentation/maneger/now_playing_cupits/cubit/nowplaying_cubit.dart';
 
 
 class NowPlayingListview extends StatelessWidget {
@@ -11,8 +11,8 @@ class NowPlayingListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => NowPlayingCubit()..fetchNowPlayingMovies(),
-      child: BlocBuilder<NowPlayingCubit, NowPlayingState>(
+      create: (context) => NowplayingCubit()..fetchNowPlayingMovies(),
+      child: BlocBuilder<NowplayingCubit, NowplayingState>(
         builder: (context, state) {
           if (state is NowPlayingLoading) {
             return const MoviesCardShimmerListView();
