@@ -3,26 +3,27 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_listview.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_shimmer_listview.dart';
-import 'package:movies_mage/features/screens/anime/anime/display_popular/cubit/popular_anime_cubit.dart';
+import 'package:movies_mage/features/screens/anime/anime/presentation/manger/japanese_cubits/japanese_anime_cubit.dart';
 
 
-class NowPlayingAnimeListview extends StatelessWidget {
-  const NowPlayingAnimeListview({super.key});
+class JapaneseAnimeListview extends StatelessWidget {
+  const JapaneseAnimeListview({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     return BlocProvider(
-      create: (_) => PopularAnimeCubit()..fetchNowPlayingAnime(),
-      child: BlocBuilder<PopularAnimeCubit, PopularAnimeState>(
+      create: (_) => JapaneseAnimeCubit()..fetchJapaneseAnime(),
+      child: BlocBuilder<JapaneseAnimeCubit, JapaneseAnimeState>(
         builder: (context, state) {
-          if (state is NowPlayingAnimeLoading) {
+          if (state is JapaneseAnimeLoading) {
             return const MoviesCardShimmerListView();
-          } else if (state is NowPlayingAnimeLoaded) {
+          } else if (state is JapaneseAnimeLoaded) {
             return MoviesListView(
               items: state.anime,
               contentType: 'anime',
             );
-          } else if (state is NowPlayingAnimeFailed) {
+          } else if (state is JapaneseAnimeFailed) {
             return Center(child: Text(state.errorMessage));
           } else {
             // Default empty fallback

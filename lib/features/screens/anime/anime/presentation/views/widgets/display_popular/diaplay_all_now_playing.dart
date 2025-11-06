@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
-import 'package:movies_mage/features/screens/anime/anime/display_popular/cubit/pagination/pagination_cupit.dart';
-import 'package:movies_mage/features/screens/anime/anime/all_anime_listview.dart';
+import 'package:movies_mage/features/screens/anime/anime/presentation/manger/popular_cubits/pagination/pagination_cupit.dart';
+import 'package:movies_mage/features/screens/anime/anime/presentation/views/widgets/all_anime_listview.dart';
 import 'package:movies_mage/core/global_model.dart';
 import 'now_playing_service.dart';
 
