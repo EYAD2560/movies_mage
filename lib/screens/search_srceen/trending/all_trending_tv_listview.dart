@@ -5,7 +5,7 @@ import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listv
 import 'package:movies_mage/screens/search_srceen/sevices/search_service.dart';
 import 'package:movies_mage/screens/search_srceen/trending/tvshows/pagination/pagination_cubit.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/screens/tv_shows/all_tv_listview.dart';
+import 'package:movies_mage/screens/tv_shows/presentation/views/widgets/all_tv_listview.dart';
 
 class AllTrendingTvShowsListview extends StatelessWidget {
   const AllTrendingTvShowsListview({super.key});

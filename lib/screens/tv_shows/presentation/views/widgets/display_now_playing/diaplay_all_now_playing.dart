@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
-import 'package:movies_mage/screens/tv_shows/display_now_playing/cubit/pagination/pagination_cubit.dart';
-import 'package:movies_mage/screens/tv_shows/display_now_playing/now_playing_service.dart';
+import 'package:movies_mage/screens/tv_shows/presentation/manger/now_playing_cubits/pagination/pagination_cubit.dart';
+import 'package:movies_mage/screens/tv_shows/presentation/views/widgets/display_now_playing/now_playing_service.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/screens/tv_shows/all_tv_listview.dart';
+import 'package:movies_mage/screens/tv_shows/presentation/views/widgets/all_tv_listview.dart';
 
 class AllNowAiringListview extends StatelessWidget {
   const AllNowAiringListview({super.key});
