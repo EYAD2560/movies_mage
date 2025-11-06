@@ -75,23 +75,19 @@ class _SearchView extends StatelessWidget {
                         tabTitles: ['Movies', 'TV Shows'],
                       ),
                       const SizedBox(height: 10),
-                      Expanded(
-                        child: SearchResults(
-                          movies: state.results
-                              .where((item) => item.mediaType == 'movie')
-                              .toList(),
-                          tvShows: state.results
-                              .where((item) => item.mediaType == 'tv')
-                              .toList(),
-                        ),
+                      SearchResults(
+                        movies: state.results
+                            .where((item) => item.mediaType == 'movie')
+                            .toList(),
+                        tvShows: state.results
+                            .where((item) => item.mediaType == 'tv')
+                            .toList(),
                       ),
                     ] else if (state is SearchError) ...[
-                      Expanded(
-                        child: Center(
-                          child: Text(
-                            state.message,
-                            style: const TextStyle(color: Colors.red),
-                          ),
+                      Center(
+                        child: Text(
+                          state.message,
+                          style: const TextStyle(color: Colors.red),
                         ),
                       ),
                     ],

@@ -1,11 +1,12 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/features/screens/tv_shows/presentation/manger/all_tv_cubits/pagination/pagination_cubit.dart';
 import 'package:movies_mage/features/screens/tv_shows/presentation/views/widgets/all_tv_listview.dart';
-import 'package:movies_mage/screens/tv_shows/presentation/views/widgets/display_all/diaplay_all_service.dart';
-import 'package:movies_mage/core/global_model.dart';
+import 'package:movies_mage/features/screens/tv_shows/presentation/views/widgets/display_all/diaplay_all_service.dart';
 
 class DisplayAllShowsListview extends StatelessWidget {
   final ScrollController controller;

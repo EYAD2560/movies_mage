@@ -11,7 +11,7 @@ import 'package:movies_mage/features/screens/tv_shows/presentation/views/widgets
 import 'package:movies_mage/features/screens/tv_shows/presentation/views/widgets/display_now_playing/now_playing_listview.dart';
 import 'package:movies_mage/features/screens/tv_shows/presentation/views/widgets/display_top_rated/display_all_top_rated.dart';
 import 'package:movies_mage/features/screens/tv_shows/presentation/views/widgets/display_top_rated/top_rated_listview.dart';
-import 'package:movies_mage/features/screens/tv_shows/upcomming_tv.dart/upcoming_tvshows_cubit.dart';
+import 'package:movies_mage/features/screens/tv_shows/presentation/manger/upcomming_tv.dart/upcoming_tvshows_cubit.dart';
 
 
 class TvShowsPageBody extends StatelessWidget {

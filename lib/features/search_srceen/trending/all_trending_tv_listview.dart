@@ -1,10 +1,11 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
-import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/features/screens/search_srceen/sevices/search_service.dart';
 import 'package:movies_mage/features/screens/tv_shows/presentation/views/widgets/all_tv_listview.dart';
+import 'package:movies_mage/features/search_srceen/sevices/search_service.dart';
 import 'package:movies_mage/features/search_srceen/trending/tvshows/pagination/pagination_cubit.dart';
 
 class AllTrendingTvShowsListview extends StatelessWidget {
