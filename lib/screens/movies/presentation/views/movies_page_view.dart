@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_mage/screens/movies/Upcoming_movies/upcomming_movies_cubit.dart';
+import 'package:movies_mage/screens/movies/presentation/maneger/Upcoming_movies/upcomming_movies_cubit.dart';
 import 'package:movies_mage/screens/movies/presentation/views/widgets/movies_page_body.dart';
 
 class MoviespageView extends StatelessWidget {

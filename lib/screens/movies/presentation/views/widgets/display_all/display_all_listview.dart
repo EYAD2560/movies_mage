@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_listview.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_shimmer_listview.dart';
-import 'package:movies_mage/screens/movies/display_all/cubit/all_movies_cubit.dart';
+import 'package:movies_mage/screens/movies/presentation/maneger/all_movies_cupits/all_movies_cubit.dart';
 
 
 class MoviesListview extends StatelessWidget {

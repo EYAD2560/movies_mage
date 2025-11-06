@@ -4,7 +4,7 @@ import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/screens/movies/presentation/views/widgets/all_movies_list_view.dart';
-import 'package:movies_mage/screens/movies/display_all/cubit/pagination/pagination_cupit.dart';
+import 'package:movies_mage/screens/movies/presentation/maneger/all_movies_cupits/pagination/pagination_cupit.dart';
 import 'package:movies_mage/screens/movies/presentation/maneger/top_rated_cupits/cupits/pagination/pagination_cupit.dart' hide PaginationLoading;
 import 'top_rated_service.dart';
 
