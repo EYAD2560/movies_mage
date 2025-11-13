@@ -5,10 +5,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/constants.dart';
 import 'package:movies_mage/core/widgets/custom_button.dart';
 import 'package:movies_mage/core/widgets/custom_text_field.dart';
-import 'package:movies_mage/features/homepage/login/cupit/logincupit_cubit.dart';
-import 'package:movies_mage/features/homepage/login/cupit/logincupit_state.dart';
-import 'package:movies_mage/features/homepage/home_screen.dart';
-import 'package:movies_mage/features/homepage/signup/sign_up_view.dart';
+import 'package:movies_mage/features/homepage/presentaion/maneger/login/logincupit_cubit.dart';
+import 'package:movies_mage/features/homepage/presentaion/maneger/login/logincupit_state.dart';
+import 'package:movies_mage/features/homepage/presentaion/views/widgets/home_screen.dart';
+import 'package:movies_mage/features/homepage/presentaion/views/widgets/signup/sign_up_view.dart';
 
 class LoginScreenBody extends StatefulWidget {
   const LoginScreenBody({super.key});

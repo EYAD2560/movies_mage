@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/constants.dart';
 import 'package:movies_mage/core/widgets/custom_button.dart';
 import 'package:movies_mage/core/widgets/custom_text_field.dart';
-import 'package:movies_mage/features/homepage/signup/cupit/cubit/sign_up_cupit_cubit.dart';
+import 'package:movies_mage/features/homepage/presentaion/maneger/sign_up/cubit/sign_up_cupit_cubit.dart';
 
 
 class SignUpBody extends StatefulWidget {

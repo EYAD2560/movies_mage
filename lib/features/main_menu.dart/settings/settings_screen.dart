@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
-import 'package:movies_mage/features/homepage/login/cupit/logincupit_cubit.dart';
-import 'package:movies_mage/features/homepage/login/cupit/logincupit_state.dart';
-import 'package:movies_mage/features/homepage/login/login_screen_view.dart';
+import 'package:movies_mage/features/homepage/presentaion/maneger/login/logincupit_cubit.dart';
+import 'package:movies_mage/features/homepage/presentaion/maneger/login/logincupit_state.dart';
+import 'package:movies_mage/features/homepage/presentaion/views/widgets/login/login_screen_view.dart';
 import 'package:movies_mage/features/main_menu.dart/main/menu_charts.dart';
 
 class SettingsScreen extends StatelessWidget {

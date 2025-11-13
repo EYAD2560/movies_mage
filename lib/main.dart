@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:movies_mage/features/homepage/onboarding_screen.dart';
+import 'package:movies_mage/features/homepage/presentaion/views/widgets/onboarding_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

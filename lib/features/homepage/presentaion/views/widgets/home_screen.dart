@@ -5,9 +5,8 @@ import 'package:movies_mage/features/screens/anime/anime/presentation/views/anim
 import 'package:movies_mage/features/screens/movies/presentation/views/movies_page_view.dart';
 import 'package:movies_mage/features/screens/tv_shows/presentation/views/tv_shows_view.dart';
 
-
 class HomeScreen extends StatelessWidget {
-   HomeScreen({super.key});
+  HomeScreen({super.key});
   final List<String> tabs = ["Movies", "Tv Shows", "Anime"];
   @override
   Widget build(BuildContext context) {
@@ -18,7 +17,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             const TabBarView(
               physics: BouncingScrollPhysics(),
-              children: [MoviespageView(),TvShowsView(), AnimeView()],
+              children: [MoviespageView(), TvShowsView(), AnimeView()],
             ),
             const Positioned(
               top: 0,
@@ -28,7 +27,7 @@ class HomeScreen extends StatelessWidget {
             ),
             const CustomTabBar(
               tabTitles: ["Movies", "Tv Shows", "Anime"],
-            ), // ✅ Cleaner
+            ),
           ],
         ),
       ),
