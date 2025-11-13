@@ -7,8 +7,8 @@ import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/features/screens/movies/presentation/views/widgets/all_movies_list_view.dart';
-import 'package:movies_mage/features/search_srceen/sevices/search_service.dart';
-import 'package:movies_mage/features/search_srceen/trending/movies/pagination/pagination_cubit.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/widgets/sevices/search_service.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/trending/presentaion/manger/movies/pagination/pagination_cubit.dart';
 
 class AllTrendingMoviesListview extends StatelessWidget {
   const AllTrendingMoviesListview({super.key});

@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/custom_tapbar.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
-import 'package:movies_mage/features/search_srceen/cubit/search_cubit.dart';
-import 'package:movies_mage/features/search_srceen/widgets/build_content.dart/search_results.dart';
-import 'package:movies_mage/features/search_srceen/widgets/build_content.dart/trending_content.dart';
-import 'package:movies_mage/features/search_srceen/widgets/search_bar.dart' ;
+import 'package:movies_mage/features/search_srceen/presentaion/manger/search/search_cubit.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/widgets/build_content.dart/search_results.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/widgets/build_content.dart/trending_content.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/widgets/search_bar.dart' ;
 
 
 class SearchScreen extends StatelessWidget {

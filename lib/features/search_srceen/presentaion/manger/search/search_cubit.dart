@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/features/search_srceen/sevices/search_service.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/widgets/sevices/search_service.dart';
 
 part 'search_state.dart';
 

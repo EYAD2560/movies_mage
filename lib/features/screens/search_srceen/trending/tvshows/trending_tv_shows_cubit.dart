@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:movies_mage/constants.dart';
 import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/gernes/genre_service.dart';
-import 'package:movies_mage/features/search_srceen/trending/tvshows/trending_tv_shows_cubit.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/trending/presentaion/manger/tvshows/trending_tv_shows_cubit.dart';
 
 
 class TrendingTvShowsCubit extends Cubit<TrendingTvShowsState> {

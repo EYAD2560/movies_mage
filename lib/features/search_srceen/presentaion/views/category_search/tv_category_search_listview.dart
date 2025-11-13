@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/shimmer/grid_view_shimmer.dart';
-import 'package:movies_mage/features/search_srceen/category_search/grid_movies_card.dart';
-import 'package:movies_mage/features/search_srceen/category_search/grid_view_shimmmer_listview.dart';
-import 'package:movies_mage/features/search_srceen/category_search/pagination/pagination_cubit.dart';
-import 'package:movies_mage/features/search_srceen/sevices/search_service.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/category_search/grid_movies_card.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/category_search/grid_view_shimmmer_listview.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/category_search/pagination/pagination_cubit.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/widgets/sevices/search_service.dart';
 
 class TvCategorySearchListview extends StatelessWidget {
   final String categoryName;

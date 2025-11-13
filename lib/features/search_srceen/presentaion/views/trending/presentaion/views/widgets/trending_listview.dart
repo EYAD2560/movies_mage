@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/features/search_srceen/widgets/trending_cards.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/widgets/trending_cards.dart';
 
 class TrendingMoviesListView extends StatelessWidget {
   const TrendingMoviesListView({

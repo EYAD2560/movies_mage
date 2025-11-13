@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movies_mage/features/search_srceen/category_search/custom_search_chips.dart';
-import 'package:movies_mage/features/search_srceen/category_search/movies_category_search_listview.dart';
-import 'package:movies_mage/features/search_srceen/category_search/tv_category_search_listview.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/category_search/custom_search_chips.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/category_search/movies_category_search_listview.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/category_search/tv_category_search_listview.dart';
 
 
 class SearchChipsListView extends StatelessWidget {

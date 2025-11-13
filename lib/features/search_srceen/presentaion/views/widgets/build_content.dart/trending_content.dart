@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:movies_mage/features/search_srceen/category_search/search_chips_listview.dart';
-import 'package:movies_mage/features/search_srceen/trending/all_trending_movies_listview.dart';
-import 'package:movies_mage/features/search_srceen/trending/all_trending_tv_listview.dart';
-import 'package:movies_mage/features/search_srceen/trending/trending_movies_listview.dart';
-import 'package:movies_mage/features/search_srceen/trending/trending_tv_listiew.dart';
-import 'package:movies_mage/features/search_srceen/widgets/trending_bar.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/category_search/search_chips_listview.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/trending/presentaion/views/widgets/all_trending_movies_listview.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/trending/presentaion/views/widgets/all_trending_tv_listview.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/trending/presentaion/views/widgets/trending_movies_listview.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/trending/presentaion/views/widgets/trending_tv_listiew.dart';
+import 'package:movies_mage/features/search_srceen/presentaion/views/widgets/trending_bar.dart';
 
 class Trendingcontent extends StatelessWidget {
   const Trendingcontent({
