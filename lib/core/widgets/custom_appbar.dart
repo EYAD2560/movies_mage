@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_mage/features/main_menu.dart/main/main_screen.dart';
+import 'package:movies_mage/features/main_menu/presentaion/views/main_screen.dart';
 import 'package:movies_mage/features/search_srceen/search_screen.dart';
 class CustomAppbar extends StatelessWidget {
   const CustomAppbar({super.key});
