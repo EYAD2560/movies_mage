@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/shimmer/recommended_card_shimmer.dart';
-import 'package:movies_mage/features/details/sections/recommended/recommended_service.dart';
-import 'package:movies_mage/features/details/sections/recommended/recommended_card.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/recommended/recommended_service.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/recommended/recommended_card.dart';
 
 class RecommendedSection extends StatelessWidget {
   final int id;

@@ -1,8 +1,8 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:movies_mage/features/details/sections/trailer/trailer_screen.dart';
-import 'package:movies_mage/features/details/sections/trailer/trailer_service.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/trailer/trailer_screen.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/trailer/trailer_service.dart';
 
 class ViewTrailer extends StatelessWidget {
   const ViewTrailer({

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
-import 'package:movies_mage/features/details/favourite/cubit/cupit/favourite_cubit.dart';
+import 'package:movies_mage/features/details/presentation/manger/favourite/favourite_cubit.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/features/details/widgets/favourite_listview.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/favourite_listview.dart';
 
 class FavouriteScreen extends StatelessWidget {
   const FavouriteScreen({super.key});

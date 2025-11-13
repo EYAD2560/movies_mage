@@ -2,7 +2,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:movies_mage/constants.dart';
-import 'package:movies_mage/features/details/sections/reviews/reviews_model.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/reviews/reviews_model.dart';
 
 class ReviewService {
   Future<List<ReviewsModel>> fetchReviews({

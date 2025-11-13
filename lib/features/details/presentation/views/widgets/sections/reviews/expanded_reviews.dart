@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_mage/constants.dart';
-import 'package:movies_mage/features/details/sections/reviews/reviews_model.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/reviews/reviews_model.dart';
 
 class ExpandableReview extends StatelessWidget {
   final ReviewsModel review;

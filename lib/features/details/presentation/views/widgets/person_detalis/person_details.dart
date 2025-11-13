@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/custom_tapbar.dart';
 import 'package:movies_mage/core/widgets/shimmer/person_details_shimmer.dart';
-import 'package:movies_mage/features/details/person_detalis/grid_view.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/person_detalis/grid_view.dart';
 
-import 'package:movies_mage/features/details/person_detalis/person_model.dart';
-import 'package:movies_mage/features/details/person_detalis/person_service.dart';
-import 'package:movies_mage/features/details/person_detalis/biography/biography_section.dart'; 
+import 'package:movies_mage/features/details/presentation/views/widgets/person_detalis/data/person_model.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/person_detalis/data/person_service.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/person_detalis/biography/biography_section.dart'; 
 
 class PersonDetails extends StatelessWidget {
   final int personid;

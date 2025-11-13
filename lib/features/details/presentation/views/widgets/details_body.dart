@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/widgets/shimmer/details_shimmer.dart';
-import 'package:movies_mage/features/details/cupit/details_cubit.dart';
-import 'package:movies_mage/features/details/sections/details.dart';
+import 'package:movies_mage/features/details/presentation/manger/details/details_cubit.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/details.dart';
 import 'package:movies_mage/core/global_model.dart';
 
 class DetailsBody extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_mage/features/details/cupit/details_cubit.dart';
-import 'package:movies_mage/features/details/details_view.dart';
+import 'package:movies_mage/features/details/presentation/manger/details/details_cubit.dart';
+import 'package:movies_mage/features/details/presentation/views/details_view.dart';
 
 class RecommendedCard extends StatelessWidget {
   final String? poster;

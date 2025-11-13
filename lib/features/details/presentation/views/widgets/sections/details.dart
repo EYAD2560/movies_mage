@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/gernes/genre_chips.dart';
-import 'package:movies_mage/features/details/widgets/details_bar.dart';
-import 'package:movies_mage/features/details/sections/backdrop.dart';
-import 'package:movies_mage/features/details/sections/cast/cast_listview.dart';
-import 'package:movies_mage/features/details/sections/overview_section.dart';
-import 'package:movies_mage/features/details/sections/rate_releasedate.dart';
-import 'package:movies_mage/features/details/sections/recommended/recommended_listview.dart';
-import 'package:movies_mage/features/details/sections/reviews/reviews_listview.dart';
-import 'package:movies_mage/features/details/sections/trailer_section.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/details_bar.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/backdrop.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/cast/cast_listview.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/overview_section.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/rate_releasedate.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/recommended/recommended_listview.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/reviews/reviews_listview.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/trailer_section.dart';
 
 class DetailsBodyStack extends StatelessWidget {
   const DetailsBodyStack({

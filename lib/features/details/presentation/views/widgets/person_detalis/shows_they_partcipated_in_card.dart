@@ -4,9 +4,9 @@ import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_mage/features/details/cupit/details_cubit.dart';
-import 'package:movies_mage/features/details/details_view.dart';
-import 'package:movies_mage/features/details/person_detalis/person_model.dart';
+import 'package:movies_mage/features/details/presentation/manger/details/details_cubit.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/person_detalis/data/person_model.dart';
+import 'package:movies_mage/features/details/presentation/views/details_view.dart';
 
 class ShowsTheyParticipatedInCard extends StatelessWidget {
   final MediaWork work;
@@ -41,8 +41,7 @@ class ShowsTheyParticipatedInCard extends StatelessWidget {
               fit: BoxFit.cover,
               width: double.infinity,
               height: double.infinity,
-              placeholder: (context, url) =>
-                  Container(color: Colors.blueGrey),
+              placeholder: (context, url) => Container(color: Colors.blueGrey),
               errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
           ),
@@ -71,7 +70,6 @@ class ShowsTheyParticipatedInCard extends StatelessWidget {
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),
-                     
                     ],
                   ),
                 ),

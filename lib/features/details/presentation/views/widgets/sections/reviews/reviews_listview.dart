@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movies_mage/features/details/sections/reviews/expanded_reviews.dart';
-import 'package:movies_mage/features/details/sections/reviews/reviews_model.dart';
-import 'package:movies_mage/features/details/sections/reviews/reviews_service.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/reviews/expanded_reviews.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/reviews/reviews_model.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/reviews/reviews_service.dart';
 
 /// This widget shows all reviews for a movie/TV show
 class ReviewsSection extends StatelessWidget {

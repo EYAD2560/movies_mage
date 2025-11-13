@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:movies_mage/features/details/person_detalis/biography/biography_page.dart';
-import 'package:movies_mage/features/details/person_detalis/person_model.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/person_detalis/biography/biography_page.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/person_detalis/data/person_model.dart';
 
 class BiographySection extends StatelessWidget {
   final FullPersonModel person;

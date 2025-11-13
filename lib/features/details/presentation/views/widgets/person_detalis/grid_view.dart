@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_mage/features/details/cupit/details_cubit.dart';
-import 'package:movies_mage/features/details/details_view.dart';
-import 'package:movies_mage/features/details/person_detalis/person_model.dart';
-import 'package:movies_mage/features/details/person_detalis/shows_they_partcipated_in_card.dart';
+import 'package:movies_mage/features/details/presentation/manger/details/details_cubit.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/person_detalis/data/person_model.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/person_detalis/shows_they_partcipated_in_card.dart';
+import 'package:movies_mage/features/details/presentation/views/details_view.dart';
 
 class PersonWorksGrid extends StatelessWidget {
   final List<MediaWork> items;

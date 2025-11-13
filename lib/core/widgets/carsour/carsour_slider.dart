@@ -5,8 +5,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:movies_mage/core/widgets/gradient.dart';
 import 'package:movies_mage/core/widgets/shimmer/curser_slider_shimmer.dart';
 import 'package:movies_mage/core/widgets/shimmer/home_shimmer.dart';
-import 'package:movies_mage/features/details/cupit/details_cubit.dart';
-import 'package:movies_mage/features/details/details_view.dart';
+import 'package:movies_mage/features/details/presentation/manger/details/details_cubit.dart';
+import 'package:movies_mage/features/details/presentation/views/details_view.dart';
 
 
 class CarouseSlider extends StatelessWidget {

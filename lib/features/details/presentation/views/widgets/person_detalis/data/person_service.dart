@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'package:http/http.dart' as http;
 import 'package:movies_mage/constants.dart';
-import 'package:movies_mage/features/details/person_detalis/person_model.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/person_detalis/data/person_model.dart';
 
 class PersonService {
 

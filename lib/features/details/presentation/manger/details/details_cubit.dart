@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_mage/features/details/movie_details_service.dart';
+import 'package:movies_mage/features/details/presentation/manger/movie_details_service.dart';
 
 part 'details_state.dart';
 

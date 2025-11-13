@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movies_mage/features/details/sections/cast/cast_model.dart';
-import 'package:movies_mage/features/details/sections/cast/cast_service.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/cast/cast_model.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/sections/cast/cast_service.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:movies_mage/features/details/person_detalis/person_details.dart';
+import 'package:movies_mage/features/details/presentation/views/widgets/person_detalis/person_details.dart';
 
 class CastListView extends StatelessWidget {
   final int id;

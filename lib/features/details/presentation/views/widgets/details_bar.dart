@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/return_button.dart';
-import 'package:movies_mage/features/details/favourite/cubit/cupit/favourite_cubit.dart';
+import 'package:movies_mage/features/details/presentation/manger/favourite/favourite_cubit.dart';
 class DetailsBar extends StatelessWidget {
   const DetailsBar({
     super.key,

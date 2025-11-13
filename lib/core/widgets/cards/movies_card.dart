@@ -1,26 +1,16 @@
 // ignore_for_file: deprecated_member_use
-
 import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies_mage/features/details/cupit/details_cubit.dart';
-import 'package:movies_mage/features/details/details_view.dart';
+import 'package:movies_mage/features/details/presentation/manger/details/details_cubit.dart';
+import 'package:movies_mage/features/details/presentation/views/details_view.dart';
 
 class MoviesCard extends StatelessWidget {
-  // Movie poster path (can be null)
   final String? poster;
-
-  // Movie name/title (can be null)
   final String? name;
-
-  // Movie rating (example: 8.4)
   final String? rate;
-
-  // Movie ID to fetch details from TMDB
   final int movieId;
-
-  // Content type (e.g., "movie", "tv", "anime")
   final String contenttype;
 
   const MoviesCard({
@@ -79,7 +69,6 @@ class MoviesCard extends StatelessWidget {
                     child: Container(
                       height: 65,
                       decoration: BoxDecoration(
-                      
                         color: Colors.black.withOpacity(0.4),
                       ),
                       child: Row(
