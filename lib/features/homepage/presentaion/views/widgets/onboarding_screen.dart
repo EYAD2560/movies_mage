@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_mage/constants.dart';
-import 'package:movies_mage/features/homepage/presentaion/views/widgets/login/login_screen_view.dart';
+import 'package:movies_mage/features/auth/presentaion/widgets/login/login_screen_view.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});

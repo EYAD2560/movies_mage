@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/features/auth/presentaion/maneger/login/logincupit_cubit.dart';
-import 'package:movies_mage/features/main_menu/presentaion/views/widgets/settings/settings_screen.dart';
+import 'package:movies_mage/features/auth/presentaion/widgets/login/login_screen_body.dart';
 
-class SettingsScreenView extends StatelessWidget {
-  const SettingsScreenView({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => LoginCubit(),
-      child: const SettingsScreen(),
+      child: const LoginScreenBody(),
     );
   }
 }
