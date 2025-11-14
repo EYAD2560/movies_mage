@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/global_model.dart';
+import 'package:movies_mage/core/pagination/cubit/global_paginator_cubit.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
-import 'package:movies_mage/features/homepage/presentaion/views/tv_shows/presentation/manger/all_tv_cubits/pagination/pagination_cubit.dart';
 import 'package:movies_mage/features/homepage/presentaion/views/tv_shows/presentation/views/widgets/all_tv_listview.dart';
 import 'package:movies_mage/features/homepage/presentaion/views/tv_shows/presentation/views/widgets/display_all/diaplay_all_service.dart';
 
@@ -15,7 +15,7 @@ class DisplayAllShowsListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => AllTvPaginationCubit<GlobalModel>(
+      create: (_) => GlobalPaginatorCubit<GlobalModel>(
         fetchPage: (page) => DisplayAllShowsService().fetchAllShows(page: page),
       )..fetchNextPage(),
       child: _DisplayAllShowsView(scrollcontroller: controller),
@@ -29,13 +29,13 @@ class _DisplayAllShowsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = context.read<AllTvPaginationCubit<GlobalModel>>();
+    final cubit = context.read<GlobalPaginatorCubit<GlobalModel>>();
 
     scrollcontroller.addListener(() {
       if (scrollcontroller.position.pixels >=
               scrollcontroller.position.maxScrollExtent - 300 &&
           cubit.hasMore &&
-          cubit.state is! AllTvPaginationLoading) {
+          cubit.state is! GlobalPaginationLoading) {
         cubit.fetchNextPage();
       }
     });
@@ -49,21 +49,21 @@ class _DisplayAllShowsView extends StatelessWidget {
             Expanded(
               child:
                   BlocBuilder<
-                    AllTvPaginationCubit<GlobalModel>,
-                    AllTvPaginationState<GlobalModel>
+                    GlobalPaginatorCubit<GlobalModel>,
+                    GlobalPaginatorState<GlobalModel>
                   >(
                     builder: (context, state) {
                       final isInitialLoading =
-                          state is AllTvPaginationLoading<GlobalModel> &&
+                          state is GlobalPaginationLoading<GlobalModel> &&
                           state.items.isEmpty;
                       final isPaginating =
-                          state is AllTvPaginationLoading<GlobalModel> &&
+                          state is GlobalPaginationLoading<GlobalModel> &&
                           state.items.isNotEmpty;
         
                       List<GlobalModel> items = [];
-                      if (state is AllTvPaginationLoaded<GlobalModel> ||
-                          state is AllTvPaginationLoading<GlobalModel> ||
-                          state is AllTvPaginationError<GlobalModel>) {
+                      if (state is GlobalPaginationLoaded<GlobalModel> ||
+                          state is GlobalPaginationLoading<GlobalModel> ||
+                          state is GlobalPaginationError<GlobalModel>) {
                         items = state.items;
                       }
         

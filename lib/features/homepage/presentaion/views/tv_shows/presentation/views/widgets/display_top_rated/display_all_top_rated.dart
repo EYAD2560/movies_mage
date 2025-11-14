@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/pagination/cubit/global_paginator_cubit.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/features/homepage/presentaion/views/tv_shows/presentation/manger/top_rated_cubits/pagination/pagination_cubit.dart';
 import 'package:movies_mage/features/homepage/presentaion/views/tv_shows/presentation/views/widgets/all_tv_listview.dart';
 import 'top_rated_service.dart';
 
@@ -13,7 +13,7 @@ class AllTopRatedShowsListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => TopRatedTvPaginationCubit<GlobalModel>(
+      create: (_) => GlobalPaginatorCubit<GlobalModel>(
         fetchPage: (int page) async {
           final service = TopRatedTvShowsService();
           return await service.fetchTopRatedTvShows(page: page);
@@ -30,7 +30,7 @@ class _TopRatedShowsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scrollController = ScrollController();
-    final cubit = context.read<TopRatedTvPaginationCubit<GlobalModel>>();
+    final cubit = context.read<GlobalPaginatorCubit<GlobalModel>>();
 
     scrollController.addListener(() {
       if (scrollController.position.pixels >=
@@ -49,22 +49,22 @@ class _TopRatedShowsBody extends StatelessWidget {
             Expanded(
               child:
                   BlocBuilder<
-                    TopRatedTvPaginationCubit<GlobalModel>,
-                    TopRatedTvPaginationState<GlobalModel>
+                    GlobalPaginatorCubit<GlobalModel>,
+                    GlobalPaginatorState<GlobalModel>
                   >(
                     builder: (context, state) {
                       final isInitialLoading =
-                          state is TopRatedTvPaginationLoading<GlobalModel> &&
+                          state is GlobalPaginationLoading<GlobalModel> &&
                           state.items.isEmpty;
                       final isPaginating =
-                          state is TopRatedTvPaginationLoading<GlobalModel> &&
+                          state is GlobalPaginationLoading<GlobalModel> &&
                           state.items.isNotEmpty;
         
                       List<GlobalModel> shows = [];
         
-                      if (state is TopRatedPaginationLoaded<GlobalModel> ||
-                          state is TopRatedTvPaginationLoading<GlobalModel> ||
-                          state is TopRatedTvPaginationError<GlobalModel>) {
+                      if (state is GlobalPaginationLoaded<GlobalModel> ||
+                          state is GlobalPaginationLoading<GlobalModel> ||
+                          state is GlobalPaginationError<GlobalModel>) {
                         shows = state.items;
                       }
         
