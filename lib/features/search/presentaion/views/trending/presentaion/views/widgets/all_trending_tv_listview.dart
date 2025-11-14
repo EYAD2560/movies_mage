@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/global_model.dart';
+import 'package:movies_mage/core/pagination/cubit/global_paginator_cubit.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/features/homepage/presentaion/views/tv_shows/presentation/views/widgets/all_tv_listview.dart';
 import 'package:movies_mage/features/search/presentaion/views/widgets/sevices/search_service.dart';
-import 'package:movies_mage/features/search/presentaion/views/trending/presentaion/manger/tvshows/pagination/pagination_cubit.dart';
 
 class AllTrendingTvShowsListview extends StatelessWidget {
   const AllTrendingTvShowsListview({super.key});
@@ -14,7 +14,7 @@ class AllTrendingTvShowsListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => TrendaingTvPaginationCubit<GlobalModel>(
+      create: (_) => GlobalPaginatorCubit<GlobalModel>(
         fetchPage: (int page) async {
           final service = SearchService();
           return await service.fetchTrendingTvShows(page: page);
@@ -31,7 +31,7 @@ class _TrendingTvShowsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scrollController = ScrollController();
-    final cubit = context.read<TrendaingTvPaginationCubit<GlobalModel>>();
+    final cubit = context.read<GlobalPaginatorCubit<GlobalModel>>();
 
     scrollController.addListener(() {
       if (scrollController.position.pixels >=
@@ -50,22 +50,22 @@ class _TrendingTvShowsBody extends StatelessWidget {
             Expanded(
               child:
                   BlocBuilder<
-                    TrendaingTvPaginationCubit<GlobalModel>,
-                    TrendaingTvPaginationState<GlobalModel>
+                    GlobalPaginatorCubit<GlobalModel>,
+                    GlobalPaginatorState<GlobalModel>
                   >(
                     builder: (context, state) {
                       final isInitialLoading =
-                          state is TrendaingTvPaginationLoading<GlobalModel> &&
+                          state is GlobalPaginationLoading<GlobalModel> &&
                           state.items.isEmpty;
                       final isPaginating =
-                          state is TrendaingTvPaginationLoading<GlobalModel> &&
+                          state is GlobalPaginationLoading<GlobalModel> &&
                           state.items.isNotEmpty;
         
                       List<GlobalModel> shows = [];
         
-                      if (state is TrendaingTvPaginationLoaded<GlobalModel> ||
-                          state is TrendaingTvPaginationLoading<GlobalModel> ||
-                          state is TrendaingTvPaginationError<GlobalModel>) {
+                      if (state is GlobalPaginationLoaded<GlobalModel> ||
+                          state is GlobalPaginationLoading<GlobalModel> ||
+                          state is GlobalPaginationError<GlobalModel>) {
                         shows = state.items;
                       }
         

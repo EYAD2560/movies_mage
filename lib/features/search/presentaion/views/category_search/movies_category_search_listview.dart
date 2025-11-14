@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/pagination/cubit/global_paginator_cubit.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/shimmer/grid_view_shimmer.dart';
 import 'package:movies_mage/features/search/presentaion/views/category_search/grid_movies_card.dart';
 import 'package:movies_mage/features/search/presentaion/views/category_search/grid_view_shimmmer_listview.dart';
-import 'package:movies_mage/features/search/presentaion/views/category_search/pagination/pagination_cubit.dart';
 import 'package:movies_mage/features/search/presentaion/views/widgets/sevices/search_service.dart';
 
 class MoviesCategorySearchListview extends StatelessWidget {
@@ -21,7 +21,7 @@ class MoviesCategorySearchListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => CategorySearchPaginationCubit<GlobalModel>(
+      create: (_) => GlobalPaginatorCubit<GlobalModel>(
         fetchPage: (int page) =>
             SearchService().fetchMoviesCategory(page: page, categoryId: categoryId),
       )..fetchNextPage(),
@@ -38,7 +38,7 @@ class MoviesCategorySearchListviewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scrollController = ScrollController();
-    final cubit = context.read<CategorySearchPaginationCubit<GlobalModel>>();
+    final cubit = context.read<GlobalPaginatorCubit<GlobalModel>>();
 
     scrollController.addListener(() {
       if (scrollController.position.pixels >=
@@ -56,20 +56,20 @@ class MoviesCategorySearchListviewBody extends StatelessWidget {
             AllHeadLine(title: "$title Movies"),
             const SizedBox(height: 12),
             Expanded(
-              child: BlocBuilder<CategorySearchPaginationCubit<GlobalModel>,
-                  CategorySearchPaginationState<GlobalModel>>(
+              child: BlocBuilder<GlobalPaginatorCubit<GlobalModel>,
+                  GlobalPaginatorState<GlobalModel>>(
                 builder: (context, state) {
                   final isInitialLoading =
-                      state is CategorySearchPaginationLoading<GlobalModel> &&
+                      state is GlobalPaginationLoading<GlobalModel> &&
                           state.items.isEmpty;
-                  final isPaginating = state is CategorySearchPaginationLoading<GlobalModel> &&
+                  final isPaginating = state is GlobalPaginationLoading<GlobalModel> &&
                       state.items.isNotEmpty;
         
                   List<GlobalModel> movies = [];
         
-                  if (state is CategorySearchPaginationLoaded<GlobalModel> ||
-                      state is CategorySearchPaginationLoading<GlobalModel> ||
-                      state is CategorySearchPaginationError<GlobalModel>) {
+                  if (state is GlobalPaginationLoaded<GlobalModel> ||
+                      state is GlobalPaginationLoading<GlobalModel> ||
+                      state is GlobalPaginationError<GlobalModel>) {
                     movies = state.items;
                   }
         
