@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/features/homepage/presentaion/views/anime/anime/presentation/manger/english_cubits/pagination/pagination_cupit.dart';
 import 'package:movies_mage/features/homepage/presentaion/views/anime/anime/presentation/views/widgets/all_anime_listview.dart';
 import 'package:movies_mage/features/homepage/presentaion/views/anime/anime/presentation/views/widgets/display_english/display_japanese/dissplay_english_service.dart';
 
