@@ -3,26 +3,24 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_listview.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_shimmer_listview.dart';
-import 'package:movies_mage/features/homepage/presentaion/views/anime/anime/presentation/manger/english_cubits/english_anime_cubit.dart';
-
-
-class EnglishAnimeListview extends StatelessWidget {
-  const EnglishAnimeListview({super.key});
+import 'package:movies_mage/features/homepage/presentaion/views/anime/presentation/manger/top_rated_cubits/top_rated_cubit.dart';
+class TopRatedAnimeListview extends StatelessWidget {
+  const TopRatedAnimeListview({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => EnglishAnimeCubit()..fetchEnglishAnime(),
-      child: BlocBuilder<EnglishAnimeCubit, EnglishAnimeState>(
+      create: (_) => TopRatedAnimeCubit()..fetchTopRatedAnime(),
+      child: BlocBuilder<TopRatedAnimeCubit, TopRatedAnimeState>(
         builder: (context, state) {
-          if (state is EnglishAnimeLoading) {
+          if (state is TopRatedAnimeLoading) {
             return const MoviesCardShimmerListView();
-          } else if (state is EnglishAnimeLoaded) {
+          } else if (state is TopRatedAnimeLoaded) {
             return MoviesListView(
               items: state.anime,
               contentType: 'anime',
             );
-          } else if (state is EnglishAnimeFailed) {
+          } else if (state is TopRatedAnimeFailed) {
             return Center(child: Text(state.errorMessage));
           } else {
             // Default empty fallback
