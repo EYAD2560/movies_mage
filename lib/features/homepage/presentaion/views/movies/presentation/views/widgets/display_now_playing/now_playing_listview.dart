@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_listview.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_shimmer_listview.dart';
-import 'package:movies_mage/features/homepage/presentaion/views/movies/presentation/maneger/now_playing_cupits/cubit/nowplaying_cubit.dart';
+import 'package:movies_mage/features/homepage/presentaion/views/movies/presentation/maneger/now_playing_cupits/nowplaying_cubit.dart';
 
 
 class NowPlayingListview extends StatelessWidget {

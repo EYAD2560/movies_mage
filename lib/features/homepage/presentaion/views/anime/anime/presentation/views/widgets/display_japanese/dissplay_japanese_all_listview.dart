@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/pagination/cubit/global_paginator_cubit.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/core/global_model.dart';
-import 'package:movies_mage/features/homepage/presentaion/views/anime/anime/presentation/manger/japanese_cubits/pagination/pagination_cupit.dart';
 import 'package:movies_mage/features/homepage/presentaion/views/anime/anime/presentation/views/widgets/all_anime_listview.dart';
 import 'package:movies_mage/features/homepage/presentaion/views/anime/anime/presentation/views/widgets/display_japanese/dissplay_japanese_service.dart';
 
@@ -13,7 +13,7 @@ class DisplayAlljapaneseAnimeListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => JapaneseAnimePagination<GlobalModel>(
+      create: (_) => GlobalPaginatorCubit<GlobalModel>(
         fetchPage: (page) =>
             DisplayAlljapaneseAnimeService().fetchAllJapaneseAnime(page: page),
       )..fetchNextPage(),
@@ -27,7 +27,7 @@ class _DisplayAllJapaneseAnimeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = context.read<JapaneseAnimePagination<GlobalModel>>();
+    final cubit = context.read<GlobalPaginatorCubit<GlobalModel>>();
     final scrollController = ScrollController();
 
     scrollController.addListener(() {
@@ -45,20 +45,20 @@ class _DisplayAllJapaneseAnimeBody extends StatelessWidget {
           children: [
             const AllHeadLine(title: "Japanese Anime"),
             Expanded(
-              child: BlocBuilder<JapaneseAnimePagination<GlobalModel>,
-                  JapaneseAnimePaginationState<GlobalModel>>(
+              child: BlocBuilder<GlobalPaginatorCubit<GlobalModel>,
+                  GlobalPaginatorState<GlobalModel>>(
                 builder: (context, state) {
                   final isInitialLoading =
-                      state is JapaneseAnimePaginationLoading<GlobalModel> &&
+                      state is GlobalPaginationLoading<GlobalModel> &&
                           state.items.isEmpty;
                   final isPaginating =
-                      state is JapaneseAnimePaginationLoading<GlobalModel> &&
+                      state is GlobalPaginationLoading<GlobalModel> &&
                           state.items.isNotEmpty;
 
                   List<GlobalModel> items = [];
-                  if (state is JapaneseAnimePaginationLoaded<GlobalModel> ||
-                      state is JapaneseAnimePaginationLoading<GlobalModel> ||
-                      state is JapaneseAnimePaginationError<GlobalModel>) {
+                  if (state is GlobalPaginationLoaded<GlobalModel> ||
+                      state is GlobalPaginationLoading<GlobalModel> ||
+                      state is GlobalPaginationError<GlobalModel>) {
                     items = state.items;
                   }
 

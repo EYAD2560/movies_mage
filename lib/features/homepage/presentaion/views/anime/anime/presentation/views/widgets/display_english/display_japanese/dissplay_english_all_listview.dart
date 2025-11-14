@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies_mage/core/pagination/cubit/global_paginator_cubit.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
 import 'package:movies_mage/core/global_model.dart';
@@ -12,7 +13,7 @@ class DisplayAllEnglishAnimeListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => EnglishAnimePagination<GlobalModel>(
+      create: (_) => GlobalPaginatorCubit<GlobalModel>(
         fetchPage: (page) =>
             DisplayAllenglishAnimeService().fetchAllenglishAnime(page: page),
       )..fetchNextPage(),
@@ -26,7 +27,7 @@ class _DisplayAllEnglishAnimeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = context.read<EnglishAnimePagination<GlobalModel>>();
+    final cubit = context.read<GlobalPaginatorCubit<GlobalModel>>();
     final scrollController = ScrollController();
 
     scrollController.addListener(() {
@@ -45,20 +46,20 @@ class _DisplayAllEnglishAnimeBody extends StatelessWidget {
           const AllHeadLine(title: "English Animation"),
             Expanded(
               child: BlocBuilder<
-                  EnglishAnimePagination<GlobalModel>,
-                  EnglishAnimePaginationState<GlobalModel>>(
+                  GlobalPaginatorCubit<GlobalModel>,
+                  GlobalPaginatorState<GlobalModel>>(
                 builder: (context, state) {
                    final isInitialLoading =
-                          state is EnglishAnimePaginationLoading<GlobalModel> &&
+                          state is GlobalPaginationLoading<GlobalModel> &&
                           state.items.isEmpty;
                       final isPaginating =
-                          state is EnglishAnimePaginationLoading<GlobalModel> &&
+                          state is GlobalPaginationLoading<GlobalModel> &&
                           state.items.isNotEmpty;
         
                       List<GlobalModel> items = [];
-                      if (state is EnglishAnimePaginationLoaded<GlobalModel> ||
-                          state is EnglishAnimePaginationLoading<GlobalModel> ||
-                          state is EnglishAnimePaginationError<GlobalModel>) {
+                      if (state is GlobalPaginationLoaded<GlobalModel> ||
+                          state is GlobalPaginationLoading<GlobalModel> ||
+                          state is GlobalPaginationError<GlobalModel>) {
                         items = state.items;
                       }
         

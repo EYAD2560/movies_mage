@@ -3,8 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/global_model.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_listview.dart';
 import 'package:movies_mage/core/widgets/listviews/movies_shimmer_listview.dart';
-import 'package:movies_mage/features/homepage/presentaion/views/anime/anime/presentation/manger/cubit/english_anime_cubit.dart';
-import 'package:movies_mage/features/homepage/presentaion/views/anime/anime/presentation/manger/english_cubits/english_anime_cubit.dart' hide EnglishAnimeCubit;
+import 'package:movies_mage/features/homepage/presentaion/views/anime/anime/presentation/manger/english_cubits/english_anime_cubit.dart';
 
 
 class EnglishAnimeListview extends StatelessWidget {

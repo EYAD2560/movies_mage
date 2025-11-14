@@ -12,24 +12,24 @@ final class GlobalPaginatorInitial<T> extends GlobalPaginatorState<T> {
   const GlobalPaginatorInitial() : super(const []);
 }
 
-class EnglishAnimePaginationLoading<T> extends GlobalPaginatorState<T> {
+class GlobalPaginationLoading<T> extends GlobalPaginatorState<T> {
   // ignore: use_super_parameters
-  const EnglishAnimePaginationLoading(List<T> items) : super(items);
+  const GlobalPaginationLoading(List<T> items) : super(items);
 }
 
-class EnglishAnimePaginationLoaded<T> extends GlobalPaginatorState<T> {
+class GlobalPaginationLoaded<T> extends GlobalPaginatorState<T> {
   final bool hasMore;
   // ignore: use_super_parameters
-  const EnglishAnimePaginationLoaded(List<T> items, {required this.hasMore}) : super(items);
+  const GlobalPaginationLoaded(List<T> items, {required this.hasMore}) : super(items);
 
   @override
   List<Object> get props => [items, hasMore];
 }
 
-class EnglishAnimePaginationError<T> extends GlobalPaginatorState<T> {
+class GlobalPaginationError<T> extends GlobalPaginatorState<T> {
   final String error;
   // ignore: use_super_parameters
-  const EnglishAnimePaginationError(List<T> items, this.error) : super(items);
+  const GlobalPaginationError(List<T> items, this.error) : super(items);
 
   @override
   List<Object> get props => [items, error];

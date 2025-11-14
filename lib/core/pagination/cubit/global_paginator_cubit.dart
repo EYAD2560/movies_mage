@@ -24,7 +24,7 @@ class GlobalPaginatorCubit<T> extends Cubit<GlobalPaginatorState<T>> {
     if (_isLoading || !_hasMore || isClosed) return;
 
     _isLoading = true;
-    _safeEmit(EnglishAnimePaginationLoading<T>(_items));
+    _safeEmit(GlobalPaginationLoading<T>(_items));
 
     try {
       final newItems = await fetchPage(_currentPage);
@@ -37,13 +37,13 @@ class GlobalPaginatorCubit<T> extends Cubit<GlobalPaginatorState<T>> {
         _currentPage++;
       }
 
-      _safeEmit(EnglishAnimePaginationLoaded<T>(
+      _safeEmit(GlobalPaginationLoaded<T>(
         List.unmodifiable(_items),
         hasMore: _hasMore,
       ));
     } catch (e, s) {
       log("⚠️ Pagination Error: $e\n$s");
-      _safeEmit(EnglishAnimePaginationError<T>(_items, e.toString()));
+      _safeEmit(GlobalPaginationError<T>(_items, e.toString()));
     } finally {
       _isLoading = false;
     }

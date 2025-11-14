@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_mage/core/global_model.dart';
+import 'package:movies_mage/core/pagination/cubit/global_paginator_cubit.dart';
 import 'package:movies_mage/core/widgets/all_head_line.dart';
 import 'package:movies_mage/core/widgets/listviews/all_movies_card_shimmer_listview.dart';
-import 'package:movies_mage/features/homepage/presentaion/views/movies/presentation/maneger/top_rated_cupits/cupits/pagination/pagination_cupit.dart';
 import 'package:movies_mage/features/homepage/presentaion/views/movies/presentation/views/widgets/all_movies_list_view.dart';
 import 'top_rated_service.dart';
 
@@ -13,7 +13,7 @@ class AllTopRatedListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => TopRatedPagination<GlobalModel>(
+      create: (_) => GlobalPaginatorCubit<GlobalModel>(
         fetchPage: (page) => TopRatedService().fetchTopRatedMovies(page: page),
       )..fetchNextPage(),
       child: const _AllTopRatedBody(),
@@ -26,7 +26,7 @@ class _AllTopRatedBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = context.read<TopRatedPagination<GlobalModel>>();
+    final cubit = context.read<GlobalPaginatorCubit<GlobalModel>>();
     final scrollController = ScrollController();
 
     scrollController.addListener(() {
@@ -44,15 +44,15 @@ class _AllTopRatedBody extends StatelessWidget {
           children: [
             const AllHeadLine(title: 'Top Rated Movies'),
             Expanded(
-              child: BlocBuilder<TopRatedPagination<GlobalModel>,
-                  TopRatedPaginationState<GlobalModel>>(
+              child: BlocBuilder<GlobalPaginatorCubit<GlobalModel>,
+                  GlobalPaginatorState<GlobalModel>>(
                 builder: (context, state) {
                   final items = state.items;
 
                   final isInitialLoading =
-                      state is PaginationLoading<GlobalModel> && items.isEmpty;
+                      state is GlobalPaginationLoading<GlobalModel> && items.isEmpty;
                   final isPaginating =
-                      state is PaginationLoading<GlobalModel> &&
+                      state is GlobalPaginationLoading<GlobalModel> &&
                           items.isNotEmpty;
 
                   if (isInitialLoading) {
